@@ -85,7 +85,36 @@ const setSuccess = (element) => {
 //   });
 
 const signUp = async () => {
-  
+  await fetch(
+    "https://capstone-backend-andela.herokuapp.com/api/v1/authentication/",
+    {
+      method: "POST",
+      body: JSON.stringify({
+        fullName: names.value,
+        email: email.value,
+        password: password.value,
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }
+  )
+    .then((response) => {
+      // console.log("Success")
+      console.log(response);
+      alert("Registered !!")
+      Toastify({
+        text: "Registered",
+        className: "info",
+        style: {
+          // background: "linear-gradient(to right, #00b09b, #96c93d)",
+          background: "#d81515",
+        },
+      }).showToast();
+    })
+    .catch((error) => {
+      console.log(error);
+    });
 };
 
 
