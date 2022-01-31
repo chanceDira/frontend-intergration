@@ -1,0 +1,236 @@
+
+
+:root {
+    --desktop: 1200px;
+    --laptop: 1024px;
+    --tablet: 768px;
+    --phone: 480px;
+    --red: #d81515;
+    --very-grey-black: #f0f0f0;
+    --grey-black: #565656;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+  }
+  
+  html {
+    font-size: 100%;
+    /* font-size: 10px; */
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Poppins, sans-serif;
+    /* overflow-x: hidden; */
+  }
+  
+  .blog_cards {
+      font-family: Noto Serif;
+      background-color: rgb(255, 255, 255);
+      width: 100%;
+      height: auto;
+      margin-top: 40px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0% 5%;
+      color: black;
+    }
+  
+  
+  /* Header */
+  
+  .header {
+      /* width: 1200px; */
+      width: 100%;
+      height: 120px;
+      font-family: Noto serif;
+      margin-top: 0;
+     
+     
+    
+      background: #4b4b4b;
+    }
+    
+    .header_route h3 {
+      width: 100%;
+      height: 100%;
+      /* margin-left: 35%;
+      margin-top: 4%; */
+      padding-left: 43%;
+      padding-top: 3%;
+    
+      font-family: Noto Serif;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 34px;
+  
+    
+      /* identical to box height */
+    
+      color: #ffffff;
+    }
+  
+    /* Starting the navbar */
+  
+  .navbar {
+      display: flex;
+  }
+  
+  .nav {
+      display: flex;
+  }
+  
+  .brand-name {
+   
+      width: 150px;
+      height: 60px;
+      margin-left: 98px;
+      margin-top: 35px;
+    
+      font-family: Noto Serif;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 30px;
+      line-height: 41px;
+    
+      color: #000000;
+      background-color: rgb(255, 255, 255);
+    }
+    
+    .nav__items {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 50px 48px;
+      font-family: Noto serif;
+    
+      /* position: absolute; */
+      width:670px;
+      height: 50px;
+      margin-left: 20px;
+      margin-top: 10px;
+      font-size: 23px;
+      /* background-color: red; */
+    }
+    
+   
+    
+    a {
+      text-decoration: none;
+      font-weight: 700;
+      color: var(--grey-black);
+    }
+    
+    ul {
+      list-style: none;
+    }
+    
+    
+    .nav__buttons .nav__item .nav-link-signup {
+  
+        display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 28px;
+    
+     
+      width: 121px;
+      height: 53px;
+      margin-left: 90%;
+      margin-top: 30px;
+      color: white;
+    
+      background: #535353;
+      border: 1px solid var(--red);
+      box-sizing: border-box;
+      border-radius: 37px;
+    }
+    
+    .nav__buttons .nav__item .nav-link-signup:hover{
+        background-color: var(--red);
+    }
+  
+
+    /* Messages Cards */
+
+    .newsletters {
+      margin: 0 5%;
+
+      font-family: Noto serif;
+      font-size: 20px;
+    }
+
+    .newsletters h3 { 
+      color: var(--red);
+      font-weight: bold;
+      font-family: Noto serif;
+      font-size: 40px;
+      margin-left: 42%;
+  
+    }
+
+
+
+  .newsletterBoxes {
+    align-items: center;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    /* background-color: chartreuse; */
+  }
+  
+
+  .newsletterBox {
+    width: 60%;
+    height: auto;
+    padding: 3%;
+    
+    flex-wrap: wrap;
+
+
+  
+    background-color: #ffffff;
+    box-shadow: 0px 8px 40px 3px rgba(0, 0, 0, 0.25);
+    border-radius: 18px;
+    transition: 0.3s;
+    margin: 30px 0;
+  }
+
+  .btn-delete {
+    align-items: center;
+
+font-family: Noto serif;
+font-weight: bold;
+width: 80px;
+height: 40px;
+border: none;
+outline: none;
+
+
+background: var(--grey-black);
+border-radius: 37px;
+color: white;
+margin-top: 3%;
+
+
+/* margin: 0px 31px; */
+}
+
+.btn-delete:hover {
+    background-color: var(--red);
+}
+
+
+
+    

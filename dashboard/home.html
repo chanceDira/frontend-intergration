@@ -1,0 +1,152 @@
+<html>
+
+<head>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <link rel="stylesheet" href="./home.css">
+    <title>My brand</title>
+
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header_route">
+            <h3 class="heading-secondary">Dashboard </h2>
+        </div>
+    </header>
+
+    <section class="top_background">
+        <div class='navbar'>
+            <div class="brand-name">
+                <strong>My Brand</strong>
+            </div>
+    
+            <!-- Mobile view -->
+    
+            <nav class="nav">
+                <ul class="nav__items">
+                    <li class="nav__item">
+                        <a href="#" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav-link">Articles</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="./messages.html" class="nav-link">Messages</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="./newsletter.html" class="nav-link">Newsletter</a>
+                    </li>
+                </ul>
+    
+                <ul class="nav__buttons">
+                    <li class="nav__item">
+                        <a href="../index.html" class="nav-link-signup" onclick="logOut()">Logout</a>
+                    </li>
+                </ul>
+            </nav>
+    
+          
+        </div>
+    </section>
+    
+
+    <main class="container">
+        <section class="card-input-form">
+            <div class="card-body">
+                <form id="post-form">
+                    <div>
+                        <h3 class="write-blog">Write an article</h3>
+                    </div>
+                    <label for="title" class="blogTitle">Article Title</label><br>
+                    <input type="text" class="form-control" id="post-title" placeholder="Add blog title ..."><br>
+                    <br>
+                    <label for="content" class="blogContent">Article</label><br>
+                    <textarea id="post" class="form-control" placeholder="Start blogging ..."></textarea><br>
+                    <label for="article-photo" class="articlePhoto">Add Article Photo</label><br>
+                    <input type="file" class="form-control" id="image" accept="images/*"><br>
+                    <div class="text-center">
+                        <button type="button" class="btn btn-success" onclick="upload()">Upload</button>
+                        <button type="button" id="btn-update" class="btn btn-success">Update</button>
+                    </div>
+
+                </form>
+            </div>
+
+            <div class="update-box" id="update-box">
+                <div class="card-body">
+                    <form id="update-form">
+                        <div>
+                            <h3 class="write-blog">Update an article</h3>
+                        </div>
+                        <label for="title" class="blogTitle">Article Title</label><br>
+                        <input type="text" class="form-control" id="post-title-update" placeholder="Add blog title ..."><br>
+                        <label for="content" class="blogContent">Article</label><br>
+                        <textarea id="post-update" class="form-control" placeholder="Start blogging ..."></textarea><br>
+                        <label for="article-photo" class="articlePhoto">Add Article Photo</label><br>
+                        <input type="file" class="form-control" id="image-update" accept="images/*"><br>
+                        <div class="text-center">
+  
+                            <button type="button" id="btn-update" class="btn btn-success" onclick="updating()">Update</button>
+                            <button type="button" class="btn btn-success" onclick="toggle()">close</button>
+                        </div>
+    
+                    </form>
+                </div>
+            </div>
+
+        </section>
+        <section class="articles" id="posts">
+
+            <h1 class="myArticles">My Articles</h1>
+            <div class="blog_cards" id="blog_cards">
+                <div class="loading">
+                    <h1>Loading, please wait   <span class="iconify" id="iconify-loading" data-icon="eos-icons:bubble-loading"></span></h1>
+                    
+                </div>
+               
+                <!-- <card class="card ">
+
+                    <img src="../assets/images/cssPhoto.jpeg" alt="photo1" class="card_photo1">
+
+
+                    <div class="card_content_container">
+                        <h4 class="card_title"><b>How to write css design</b></h4>
+                        <p class="card_content">
+                            Edublogs is meant for individual teachers, while CampusPress
+                            is designed for entire schools, districts, or universities.
+                        </p>
+                        <div class="card_stars">
+                            <span class="iconify" data-icon="emojione:star"></span>
+                            <span class="iconify" data-icon="emojione:star"></span>
+                            <span class="iconify" data-icon="emojione:star"></span>
+                            <span class="iconify" data-icon="emojione:star"></span>
+                            <span class="iconify" data-icon="emojione:star"></span>
+                        </div>
+                        <a href="../pages/article.html" class="card_more_link1">more</a>
+                        <button class='btn btn-delete' id='"+key+"' onclick='delete_post(this.id)'>Delete</button>
+                    </div>
+                </card> -->
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+
+
+
+
+        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase.js"></script>
+        <script src="./home.js"></script>
+</body>
+
+</html>

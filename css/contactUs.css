@@ -1,0 +1,546 @@
+
+
+:root {
+  --desktop: 1200px;
+  --laptop: 1024px;
+  --tablet: 768px;
+  --phone: 480px;
+  --red: #d81515;
+  --very-grey-black: #f0f0f0;
+  --grey-black: #565656;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 100%;
+  /* font-size: 10px; */
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Poppins, sans-serif;
+  /* overflow-x: hidden; */
+}
+
+/* Starting the navbar */
+
+.brand-name {
+  position: absolute;
+  width: 185px;
+  height: 42px;
+  left: 98px;
+  top: 77px;
+
+  font-family: Noto Serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 41px;
+
+  color: #000000;
+}
+
+.nav__items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 48px;
+
+  position: absolute;
+  width: 570px;
+  height: 104px;
+  left: 270px;
+  top: 49px;
+}
+
+.nav__buttons {
+  position: absolute;
+  /* right: 10px; */
+  background-color: chocolate;
+  color: green;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 700;
+  color: var(--grey-black);
+}
+
+ul {
+  list-style: none;
+}
+
+.nav__item .nav-link-login {
+  position: absolute;
+  width: 69px;
+  height: 31px;
+  left: 973px;
+  top: 86px;
+
+  font-family: Noto Serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 23px;
+  line-height: 31px;
+
+  color: #d81515;
+}
+
+.nav__item .nav-link-signup {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 28px;
+
+  position: absolute;
+  width: 121px;
+  height: 53px;
+  left: 1073px;
+  top: 77px;
+
+  border: 1px solid white;
+  background: #535353;
+  color: white;
+  box-sizing: border-box;
+  border-radius: 37px;
+}
+
+/* Header */
+
+.header {
+  position: absolute;
+  /* width: 1200px; */
+  width: 100%;
+  height: 120px;
+  left: 0px;
+  top: 150px;
+
+  background: #565656;
+}
+
+.header_route h3 {
+  position: absolute;
+  width: 182px;
+  height: 33px;
+  left: 550px;
+  top: 40px;
+
+  font-family: Noto Serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 33px;
+
+  /* identical to box height */
+
+  color: #ffffff;
+}
+
+/* contact form */
+
+.contact_form .contact_names {
+  position: absolute;
+  width: 91px;
+  height: 37px;
+  left: 150px;
+  top: 330px;
+
+  font-family: Noto Serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 29px;
+
+  color: #000000;
+
+  /* Inside Auto Layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 17px 0px;
+}
+
+.contact_names_input {
+  position: absolute;
+  width: 479px;
+  height: 46px;
+  left: 150px;
+  top: 370px;
+  border: none;
+  /* border: 2px solid #c4c4c4; */
+  outline: none;
+  padding: 0 20px;
+
+  background: #dbdbdb;
+  border-radius: 15px;
+
+  /* Inside Auto Layout */
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  margin: 17px 0px;
+}
+
+/* .contact_names_input:focus {
+  border: 2px solid #f2796e;
+} */
+
+.error {
+  position: absolute;
+  font-size: 14.5px;
+  margin-top: 5px;
+  background-color: #d81515;
+  height: 30px;
+  width: 60px;
+  left: 150px;
+  top: 400px;
+}
+
+.contact_email {
+  position: absolute;
+  width: 91px;
+  height: 37px;
+  left: 150px;
+  top: 450px;
+
+  font-family: Noto Serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 29px;
+
+  color: #000000;
+}
+
+.contact_email_input {
+  position: absolute;
+  width: 479px;
+  height: 46px;
+  left: 150px;
+  top: 490px;
+  border: none;
+  outline: none;
+  padding: 20px;
+
+  background: #dbdbdb;
+  border-radius: 15px;
+}
+
+.contact_comment {
+  position: absolute;
+  width: 347px;
+  height: 37px;
+  left: 0px;
+  top: 234px;
+
+  font-family: Noto Serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 29px;
+
+  color: #000000;
+  left: 150px;
+  top: 555px;
+}
+
+.contact_comment_input {
+  position: absolute;
+  width: 479px;
+  height: 224px;
+  left: 150px;
+  top: 595px;
+  border: none;
+  outline: none;
+  padding: 20px;
+
+  background: #dbdbdb;
+  border-radius: 15px;
+}
+
+.submit_contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 28px;
+
+  position: absolute;
+  width: 110px;
+  height: 30px;
+  left: 150px;
+  top: 850px;
+
+  background: #d81515;
+  border-radius: 37px;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 20px;
+}
+
+.location_card {
+  position: absolute;
+  width: 337px;
+  height: 350px;
+  left: 800px;
+  top: 445px;
+
+  background: #ffffff;
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  box-shadow: 2px 9px 22px 4px rgba(0, 0, 0, 0.14);
+  border-radius: 20px;
+}
+
+.contact_contacts .heading-secondary {
+  position: absolute;
+  width: 117px;
+  height: 37px;
+  left: 20px;
+  top: 20px;
+
+  font-family: Noto Serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 29px;
+
+  color: #000000;
+}
+
+.contact_contacts p {
+  position: absolute;
+  width: 350px;
+  height: 68px;
+  left: 20px;
+  top: 60px;
+
+  font-family: Noto Serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #8c8c8c;
+}
+
+.location .heading-secondary {
+  position: absolute;
+  width: 130px;
+  height: 37px;
+  left: 20px;
+  top: 120px;
+
+  font-family: Noto Serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 29px;
+
+  color: #000000;
+}
+
+.location p {
+  position: absolute;
+  width: 230px;
+  height: 68px;
+  left: 20px;
+  top: 160px;
+
+  font-family: Noto Serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #8c8c8c;
+}
+
+/* Footer */
+
+.footer .newsletter_form {
+  position: absolute;
+  width: 898px;
+  height: 129px;
+  left: 220px;
+  top: 1113px;
+
+  background: #d81515;
+  border-radius: 24px;
+}
+
+.newsletter_box .btn_submit {
+  position: absolute;
+  width: 174px;
+  height: 46px;
+  outline: none;
+  border: none;
+  left: 650px;
+  top: 40px;
+  color: #d81515;
+
+  background: #ffffff;
+  border-radius: 15px;
+}
+
+.user_email_newsletter {
+  position: absolute;
+  width: 578px;
+  height: 46px;
+  left: 40px;
+  top: 40px;
+  border: none;
+  outline: none;
+  padding: 20px;
+
+  background: #dbdbdb;
+  border-radius: 15px;
+}
+
+.footer-footer {
+  position: absolute;
+  width: 100%;
+  height: 468px;
+  left: 0px;
+  top: 1166px;
+
+  background: #393939;
+  z-index: -1;
+}
+
+.footer-footer .brand_name {
+  position: absolute;
+  width: 163px;
+  height: 42px;
+  left: 40px;
+  top: 150px;
+
+  font-family: Noto Serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 38px;
+
+  color: #d7d7d7;
+}
+
+.quick_links {
+  position: absolute;
+  width: 185px;
+  height: 42px;
+  left: 350px;
+  top: 150px;
+
+  font-family: Noto Serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 38px;
+
+  color: #d7d7d7;
+}
+
+.bio_list1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: left;
+  padding: 0px;
+
+  position: absolute;
+  width: 185px;
+  height: 126px;
+  left: 350px;
+  top: 230px;
+}
+
+.footer_blog {
+  position: absolute;
+  width: 84px;
+  height: 42px;
+  left: 600px;
+  top: 150px;
+
+  font-family: Noto Serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 38px;
+
+  color: #d7d7d7;
+}
+
+.about_me {
+  position: absolute;
+  width: 185px;
+  height: 42px;
+  left: 850px;
+  top: 150px;
+
+  font-family: Noto Serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 38px;
+
+  color: #d7d7d7;
+}
+
+.bio_list2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: left;
+  padding: 0px;
+
+  position: absolute;
+  width: 185px;
+  height: 126px;
+  left: 600px;
+  top: 230px;
+}
+
+.bio_list3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: left;
+  padding: 0px;
+
+  position: absolute;
+  width: 185px;
+  height: 126px;
+  left: 850px;
+  top: 230px;
+}
+
+.brand_socials {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+
+  position: absolute;
+  width: 241px;
+  height: 68px;
+  left: 550px;
+  top: 380px;
+  color: var(--very-grey-black);
+}
+
+.attribution {
+  position: absolute;
+  left: 590px;
+  top: 440px;
+}
