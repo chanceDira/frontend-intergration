@@ -72,17 +72,7 @@ const setSuccess = (element) => {
 };
 
 
-// firebase.auth().createUserWithEmailAndPassword(emailValue, passwordValue)
-//   .then((userCredential) => {
-//     // Signed in 
-//     var user = userCredential.user;
-//     // ...
-//   })
-//   .catch((error) => {
-//     var errorCode = error.code;
-//     var errorMessage = error.message;
-//     // ..
-//   });
+
 
 const signUp = async () => {
   await fetch(
@@ -111,10 +101,16 @@ const signUp = async () => {
           background: "#d81515",
         },
       }).showToast();
+      setInterval(() => {
+        window.location.href = "../pages/login.html";
+      }, 5000)
+  
     })
     .catch((error) => {
       console.log(error);
     });
+
+   
 };
 
 

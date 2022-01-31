@@ -1,58 +1,79 @@
-console.log("Initializing firebase");
+const email = document.getElementById("signup_email_input");
+const password = document.getElementById("signup_password_input");
+const logginBtn = document.getElementById("login");
 
-const firebaseConfig = {
-    apiKey: "AIzaSyDJ9D-YEpxmEnBZck-u1M6QOdfZNNvQTZs",
-    authDomain: "atlp-capstone-project-b6159.firebaseapp.com",
-    projectId: "atlp-capstone-project-b6159",
-    storageBucket: "atlp-capstone-project-b6159.appspot.com",
-    messagingSenderId: "1042536780820",
-    appId: "1:1042536780820:web:6c265cd2a51f99f41ac301"
+// const logIn = async () => {
+//   await fetch(
+//     "https://capstone-backend-andela.herokuapp.com/api/v1/authentication/login",
+//     {
+//       method: "POST",
+//       body: JSON.stringify({
+//         email: email.value,
+//         password: password.value,
+//       }),
+//       headers: {
+//         "Content-Type": "application/json",
+//       },
+//     }
+//   )
+//     .then((response) => {
+//       // console.log("Success")
+//       console.log(response);
+//       alert("Logged In !!");
+//       Toastify({
+//         text: "Logged In",
+//         className: "info",
+//         style: {
+//           // background: "linear-gradient(to right, #00b09b, #96c93d)",
+//           background: "#d81515",
+//         },
+//       }).showToast();
+//       location.href = "../dashboard/home.html";
+//     })
+//     .catch((error) => {
+//       console.log(error);
+//     });
 
-  };
- 
+// };
 
-  firebase.initializeApp(firebaseConfig);
-  const db = firebase.database();
-//   console.log(app.name);
+logginBtn.addEventListener("click", async (e) => {
+  e.preventDefault();
 
-const auth = firebase.auth();
-	
-	
-function logIn(){
-    
-  
-    const email = document.getElementById("signup_email_input").value;
-    const password = document.getElementById("signup_password_input").value;
-    
-
-    auth.signInWithEmailAndPassword(email, password)
-    .then(function() {
-   
-      var user = auth.currentUser
-      var database_ref = db.ref()
-  
-      var user_data = {
-        last_login : Date.now()
+  await fetch(
+    "https://capstone-backend-andela.herokuapp.com/api/v1/authentication/login",
+    {
+      crossDomain: true,
+      method: "POST",
+      body: JSON.stringify({
+        email: email.value,
+        password: password.value,
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }
+  )
+    .then((res) => res.json())
+    .then((response) => {
+      // console.log("Success")
+      console.log(response?.code)
+      console.log(response);
+      if(response?.code === 200) {
+          localStorage.setItem("token", response?.data?.token);
+          location.href = "../dashboard/home.html";
       }
-  
-      database_ref.child('users/' + user.uid).update(user_data)
-  
-      alert('User Logged In!!')
-    //   window.location.replace('../dashboard/home.html');
-      location.href = "../dashboard/home.html";
+      alert("Logged In !!");
+      // Toastify({
+      //   text: "Logged In",
+      //   className: "info",
+      //   style: {
+      //     // background: "linear-gradient(to right, #00b09b, #96c93d)",
+      //     background: "#d81515",
+      //   },
+      // }).showToast();
+      // location.href = "../dashboard/home.html";
     })
-    .catch(function(error) {
-      var error_code = error.code
-      var error_message = error.message
-  
-      alert(error_message)
-    })
-
-    
-
-
-}
-
-
-
-
+    .catch((error) => {
+      console.log(error);
+    });
+});
