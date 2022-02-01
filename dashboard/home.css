@@ -197,6 +197,32 @@ body {
     border-radius: 15px;
   }
 
+  #post-sub-title {
+ 
+    width: 479px;
+    height: 46px;
+  
+    border: none;
+    outline: none;
+    padding: 20px;
+  
+    background: #dbdbdb;
+    border-radius: 15px;
+  }
+
+  #post-Image {
+ 
+    width: 479px;
+    height: 46px;
+  
+    border: none;
+    outline: none;
+    padding: 20px;
+  
+    background: #dbdbdb;
+    border-radius: 15px;
+  }
+
 #post {
    
     width: 479px;
@@ -232,7 +258,102 @@ margin-top: 10px;
     background-color: var(--red);
 }
 
-/* update */
+/* update article*/
+
+.card-body {
+  margin-left: 32%;
+  margin-bottom: 5%;
+}
+
+.update-blog {
+color: var(--red);
+font-weight: bold;
+font-family: Noto serif;
+font-size: 20px;
+margin-left: 30%;
+margin-bottom: 3%;
+
+}
+
+#update-form label {
+font-family: Noto serif;
+font-size: 15px;
+font-weight: bold;
+}
+
+#post-title-update {
+
+width: 479px;
+height: 30px;
+
+border: none;
+outline: none;
+padding: 10px;
+
+background: #dbdbdb;
+border-radius: 8px;
+}
+
+#post-sub-title-update {
+
+width: 479px;
+height: 30px;
+
+border: none;
+outline: none;
+padding: 10px;
+
+background: #dbdbdb;
+border-radius: 8px;
+}
+
+#update-Image {
+
+width: 479px;
+height: 30px;
+
+border: none;
+outline: none;
+padding: 10px;
+
+background: #dbdbdb;
+border-radius: 8px;
+}
+
+#post-update {
+
+width: 479px;
+height: 224px;
+border: none;
+outline: none;
+padding: 10px;
+
+
+background: #dbdbdb;
+border-radius: 8px;
+}
+
+.btn-success {
+align-items: center;
+
+font-family: Noto serif;
+font-weight: bold;
+width: 80px;
+height: 40px;
+border: none;
+outline: none;
+
+
+background: var(--grey-black);
+border-radius: 37px;
+color: white;
+
+margin-top: 10px;
+}
+
+.btn-success:hover {
+background-color: var(--red);
+}
 
 .update-box{
   position: absolute;
@@ -244,15 +365,15 @@ margin-top: 10px;
   display: none;
 }
 
-.update-box .card-body {
+.update-box .card-body-update {
   background-color: #FFF;
   width: 50%;
   height: 100%;
   margin-left: 25%;
 }
 
-.card-body #update-form {
-  padding: 10%;
+.card-body-update #update-form {
+  padding: 8% 13%;
 }
   
 
@@ -313,8 +434,7 @@ margin-top: 10px;
   }
 
   .btn-delete {
-    align-items: center;
-
+    /* align-items: center; */
 font-family: Noto serif;
 font-weight: bold;
 width: 80px;
@@ -328,12 +448,35 @@ border-radius: 37px;
 color: white;
 
 
-margin: 0px 31px;
+margin-left: 60px;
 }
 
 .btn-delete:hover {
     background-color: var(--red);
 }
+
+.btn-update {
+  /* align-items: center; */
+font-family: Noto serif;
+font-weight: bold;
+width: 80px;
+height: 40px;
+border: none;
+outline: none;
+
+
+background: var(--grey-black);
+border-radius: 37px;
+color: white;
+
+
+/* margin-left: 35px; */
+}
+
+.btn-update:hover {
+  background-color: var(--red);
+}
+
 
 .loading {
     color: var(--grey-black);

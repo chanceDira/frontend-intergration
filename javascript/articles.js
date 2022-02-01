@@ -50,11 +50,11 @@ getData = async () => {
                   `
         ).join("");
     })
-    .catch(function (error) {
+    .catch((error) => {
       // handle error
       console.log(error);
     })
-    .then(function () {
+    .then(() => {
       // always executed
     });
 
