@@ -102,7 +102,7 @@ const signUp = async () => {
         },
       }).showToast();
       setInterval(() => {
-        window.location.href = "../pages/login.html";
+        location.href = "../pages/login.html";
       }, 5000)
   
     })
