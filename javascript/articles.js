@@ -99,7 +99,5 @@ getData = async () => {
 };
 
 const moreContent = (key) => {
-  console.log(JSON.stringify(key))
-  window.localStorage.setItem('key', JSON.stringify(key));
-  window.location.href = "../pages/article.html";
+  location.href = `../pages/article.html?id=${key}`;
 } 

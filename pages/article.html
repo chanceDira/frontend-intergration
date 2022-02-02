@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel='stylesheet' href='../css/article.css'>
     <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
     
@@ -104,8 +105,14 @@
             <h3 class="comment_title">
                 Comments
             </h3>
-            <div class="cards">
-                <card class="card card_comment">
+            <div class="cards" id="comments_card">
+                
+                <div class="loading">
+                    <h1>Loading, please wait   <span class="iconify" id="iconify-loading" data-icon="eos-icons:bubble-loading"></span></h1>
+                    
+                </div>
+                
+                <!-- <card class="card card_comment">
                     <p>
                         approved a report endorsing the values of the European sports model, 
                         in which breakaway competitions contrary to these values have no place
@@ -125,7 +132,7 @@
                         in which breakaway competitions contrary to these values have no place
                     </p>
                     <h4><i>10 days ago, Ishimwe Kevin</i></h4>
-                </card>
+                </card> -->
             </div>
         </section>
 
@@ -134,25 +141,25 @@
             <form action="" class="comment_form">
             
                     <label for="names">Names</label><br>
-                    <input type="text" class="names_input"><br>
+                    <input type="text" class="names_input" id="names_input"><br>
                     <div class="error error_names"></div>
                 
 
             
                     <label for="Email">Email</label><br>
-                    <input type="text" class="email_input"><br>
+                    <input type="text" class="email_input" id="email_input"><br>
                     <div class="error error_email"></div>
                 
 
             
                     <label for="comment">Comment</label><br>
-                    <textarea class="comment_input" rows="4" cols="50"></textarea><br>
+                    <textarea class="comment_input" id="comment_input" rows="4" cols="50"></textarea><br>
                     <div class="error error_comment"></div><br>
                 
               
              
                
-                <button class="btn btn_submit">Comment</button>
+                <button class="btn btn_submit" onclick="newComment()">Comment</button>
             </form>
         </section>
 
@@ -228,6 +235,7 @@
             </div>
         </div>
     </footer>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src='../javascript/article.js'></script>
 </body>
 </html>

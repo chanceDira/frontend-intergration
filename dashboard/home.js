@@ -1,10 +1,20 @@
+window.onload = function () {
+  let token = (localStorage.getItem('token'));
+  console.log("Token2 " + token)
+  if(token) {
+    this.getData();
+  } else {
+    window.location.href = "../index.html";
+  }
+  
+};
 
 
 const upload = () => {
-  var image = document.getElementById("post-image").value;
-  var post = document.getElementById("post").value;
-  var postTitle = document.getElementById("post-title").value;
-  var postSubTitle = document.getElementById("post-sub-title").value;
+  let image = document.getElementById("post-image").value;
+  let post = document.getElementById("post").value;
+  let postTitle = document.getElementById("post-title").value;
+  let postSubTitle = document.getElementById("post-sub-title").value;
   let token = (localStorage.getItem('token'));
 
   fetch('https://capstone-backend-andela.herokuapp.com/api/v1/admin/newblog', {
@@ -40,9 +50,6 @@ const upload = () => {
 
 }
 
-window.onload = function () {
-  this.getData();
-};
 
 
 getData = async () => {
