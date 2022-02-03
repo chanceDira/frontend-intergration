@@ -1,4 +1,15 @@
-window.onload = function () {
+// window.onload = function () {
+//   let token = (localStorage.getItem('token'));
+//   console.log("Token2 " + token)
+//   if(token) {
+//     this.getData();
+//   } else {
+//     window.location.href = "../index.html";
+//   }
+  
+// };
+
+window.addEventListener("load", () => {
   let token = (localStorage.getItem('token'));
   console.log("Token2 " + token)
   if(token) {
@@ -6,8 +17,7 @@ window.onload = function () {
   } else {
     window.location.href = "../index.html";
   }
-  
-};
+});
 
 
 const upload = () => {
