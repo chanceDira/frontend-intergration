@@ -7,6 +7,7 @@
     <link rel='stylesheet' href='../css/login.css'>
     <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
     <!-- <script src='javascript/script.js'></script> -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
@@ -70,7 +71,7 @@
                 <input type="text" class="signup_email_input" id="signup_email_input">
                 <label for="Names" class="signup_password">Password</label>
                 <input type="password" class="signup_password_input" id="signup_password_input">
-                <button onClick="logIn()" class="signup_submit"><strong>Login</strong></button>
+                <button id="login" class="signup_submit"><strong>Login</strong></button>
                 <p class="else_login">Don’t have an account? <strong><u>Signup</u></strong></p>
             </form>
         </section>
@@ -147,6 +148,7 @@
             </div>
         </div>
     </footer>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src='../javascript/login.js'></script>
 </body>
 </html>

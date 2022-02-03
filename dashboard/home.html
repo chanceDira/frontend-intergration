@@ -1,12 +1,10 @@
 <html>
 
 <head>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
     <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
     <link rel="stylesheet" href="./home.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <title>My brand</title>
 
 </head>
@@ -45,7 +43,7 @@
     
                 <ul class="nav__buttons">
                     <li class="nav__item">
-                        <a href="../index.html" class="nav-link-signup" onclick="logOut()">Logout</a>
+                        <a class="nav-link-signup" onclick="logOut()">Logout</a>
                     </li>
                 </ul>
             </nav>
@@ -65,34 +63,42 @@
                     <label for="title" class="blogTitle">Article Title</label><br>
                     <input type="text" class="form-control" id="post-title" placeholder="Add blog title ..."><br>
                     <br>
+                    <label for="SubTitle" class="blogSubTitle">Article Sub Title</label><br>
+                    <input type="text" class="form-control" id="post-sub-title" placeholder="Add blog title ..."><br>
+                    <br>
                     <label for="content" class="blogContent">Article</label><br>
                     <textarea id="post" class="form-control" placeholder="Start blogging ..."></textarea><br>
+                    <br>
                     <label for="article-photo" class="articlePhoto">Add Article Photo</label><br>
-                    <input type="file" class="form-control" id="image" accept="images/*"><br>
+                    <input type="text" class="form-control" id="post-image" placeholder="Add article image"><br>
                     <div class="text-center">
                         <button type="button" class="btn btn-success" onclick="upload()">Upload</button>
-                        <button type="button" id="btn-update" class="btn btn-success">Update</button>
+                        <!-- <button type="button" id="btn-update" class="btn btn-success">Update</button> -->
                     </div>
 
                 </form>
             </div>
 
             <div class="update-box" id="update-box">
-                <div class="card-body">
+                <div class="card-body-update">
                     <form id="update-form">
                         <div>
-                            <h3 class="write-blog">Update an article</h3>
+                            <h3 class="update-blog">Update an article</h3>
                         </div>
-                        <label for="title" class="blogTitle">Article Title</label><br>
+                        <label for="title" class="blogTitle-update">Article Title</label><br>
                         <input type="text" class="form-control" id="post-title-update" placeholder="Add blog title ..."><br>
-                        <label for="content" class="blogContent">Article</label><br>
+                        <br>
+                        <label for="SubTitle" class="blogSubTitle-update">Article Sub Title</label><br>
+                        <input type="text" class="form-control" id="post-sub-title-update" placeholder="Add blog title ..."><br>
+                        <br>
+                        <label for="content" class="blogContent-update">Article</label><br>
                         <textarea id="post-update" class="form-control" placeholder="Start blogging ..."></textarea><br>
-                        <label for="article-photo" class="articlePhoto">Add Article Photo</label><br>
-                        <input type="file" class="form-control" id="image-update" accept="images/*"><br>
+                        <br>
+                        <label for="article-photo" class="articlePhoto-update">Add Article Photo</label><br>
+                        <input type="text" class="form-control" id="update-image" placeholder="Add article image"><br>
                         <div class="text-center">
-  
-                            <button type="button" id="btn-update" class="btn btn-success" onclick="updating()">Update</button>
-                            <button type="button" class="btn btn-success" onclick="toggle()">close</button>
+                            <button type="button" id="btn-update" class="btn btn-success" onclick="update()">Update</button>
+                            <button type="button" class="btn btn-success" onclick="toggleBtn()">close</button>
                         </div>
     
                     </form>
@@ -129,6 +135,7 @@
                         </div>
                         <a href="../pages/article.html" class="card_more_link1">more</a>
                         <button class='btn btn-delete' id='"+key+"' onclick='delete_post(this.id)'>Delete</button>
+                        <button class='btn btn-update' id='"+key+"' onclick='update_post(this.id)'>Update</button>
                     </div>
                 </card> -->
             </div>
@@ -144,9 +151,8 @@
 
 
 
-        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase.js"></script>
-        <script src="./home.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="./home.js"></script>
 </body>
 
 </html>
